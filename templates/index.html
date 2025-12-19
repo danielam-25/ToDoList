@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="text-center mb-4">Welcome to Your Habit Tracker</h1>
+<div class="text-center">
+    <p class="lead">Build better habits, one day at a time.</p>
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5>Add New Habit</h5>
+                    <a href="{{ url_for('add_habit') }}" class="btn btn-primary">Go →</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5>Mark Today's Progress</h5>
+                    <a href="{{ url_for('progress') }}" class="btn btn-success">Go →</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5>View All Habits</h5>
+                    <a href="{{ url_for('add_habit') }}" class="btn btn-info">Manage</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
